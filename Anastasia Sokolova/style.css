@@ -4,9 +4,9 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.container {
+section {
   display: block;
-  width: 500px;
+  width: 600px;
   margin: 100px auto;
 }
 ul {
@@ -26,7 +26,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  color: #333;
+  color: #275dd5;
 }
 /* Heading */
 h3 {
@@ -51,31 +51,43 @@ input[type='text']:focus {
   color: #333;
 }
 #deadline {
-  margin: 10px 0px;
+  display: inline-block;
   padding: 0px;
   height: auto;
+  width: 160px;
 }
-.container > label {
+section > label {
   color: #888;
   font-size: 16px;
   margin-left: 10px;
 }
-#new-task {
-  width: 80%;
+#newTask {
+  width: 65%;
+  margin: 0px 10px 10px 0px;
 }
 #add {
   display: block;
+  padding: 2px 10px;
   border: 1px solid #ddd;
-  background: rgb(212, 217, 240);
+  background: rgb(238, 235, 235);
   border-radius: 6px;
   font-size: 18px;
   color: #1d1a1a;
 }
-
+.btn {
+  border: 1px solid #ddd;
+  background: rgb(238, 235, 235);
+  border-radius: 6px;
+  font-size: 18px;
+  color: #1d1a1a;
+}
 #add:hover {
   color: #009157;
 }
 
+.filter button {
+  display: inline-block;
+}
 /* Task list */
 li {
   overflow: hidden;
@@ -87,12 +99,17 @@ input[type='checkbox'] {
   transform: scale(1.5);
 }
 li > label {
-  font-size: 18px;
-  width: 65%;
+  font-size: 16px;
+  width: 55%;
   padding: 0 0 0 11px;
 }
 li > input[type='text'] {
   width: 50%;
+}
+.data {
+  height: 18px;
+  width: 85px;
+  margin-right: 10px;
 }
 
 li > .delete:hover {
@@ -101,20 +118,28 @@ li > .delete:hover {
 
 /* Completed */
 
-#completed-tasks label {
+#completedTasks label {
   text-decoration: line-through;
   color: #227d0b;
 }
 
 /* Edit Task */
-ul li input[type='text'] {
+ul li input[type='text'],
+input[type='data'] {
   display: none;
 }
 
-ul li.editMode input[type='text'] {
+.editMode input[type='text'] {
   display: block;
+  width: 60%;
 }
-
-ul li.editMode label {
+.editMode input[type='data'] {
+  display: block;
+  width: 20%;
+}
+.editMode input[type='data']:invalid {
+  border: 2px solid rgb(201, 0, 0);
+}
+.editMode label {
   display: none;
 }

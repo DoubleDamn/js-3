@@ -4,21 +4,22 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-    <div class="container">
+    <section>
       <h1>TODO LIST</h1>
 
       <h3>Add Item</h3>
-      <input id="new-task" type="text" /> <label>New task</label>
-      <input id="deadline" type="date" /> <label>Deadline</label>
-      <button id="add">ADD</button>
+      <input id="newTask" type="text" /> <input id="deadline" type="date" />
+      <button id="add" class="btn">ADD</button>
 
       <h3>Todo</h3>
-      <ul id="incomplete-tasks"></ul>
-
+      <button id="tomorrow" class="btn">Tomorrow</button>
+      <button id="week" class="btn">This week</button>
+      <button id="allTasks" class="btn">All</button>
+      
+      <ul id="incompleteTasks"></ul>
       <h3>Completed</h3>
-      <ul id="completed-tasks"></ul>
-    </div>
-
+      <ul id="completedTasks"></ul>
+    <section>
     <script src="todo.js"></script>
   </body>
 </html>
